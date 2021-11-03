@@ -19,7 +19,6 @@
 # print("Correct Answer: 4")
 
 
-
 def swap(lineorder, num):
     currentpos = lineorder.index(num)
     nextpos = currentpos - 1
