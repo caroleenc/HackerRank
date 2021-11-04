@@ -1,5 +1,7 @@
 import math
 
+#https://www.hackerrank.com/challenges/repeated-string/submissions/code/239537677
+
 def jeremy_repeatedstring(s, n):
     count = 0
     for i in s:
