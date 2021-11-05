@@ -28,7 +28,7 @@ def minimumbribes(q):
 
 if __name__ == "__main__":
     # Test Cases
-
+    # t = [1, 2, 3, 4, 5]
     # q = [2, 1, 5, 3, 4]
     # print("Correct Answer: 3")
 
