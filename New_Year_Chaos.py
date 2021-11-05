@@ -28,14 +28,18 @@ def jeremy_minimumbribes(q):
 def caroleen_minimumbribes(q):
     if len(q) == 0 or len(q) == 1:
         return 0
-    bribe = 0
+    bribes = 0
+    print(q)
     for num in range(len(q)):
-        if num+1 == len(q):
-            return bribe
-        elif q[num] - q[num+1] >= 3:
-            return "Too Chaotic"
-        elif q[num] > q[num+1]:
-            bribe += (q[num]-q[num+1])
+        print("i: ", num, "q[i] ", q[num])
+        if q[num] - (num+1) > 2:
+            return "Too chaotic"
+        print(range(max(0,q[num]-2), num))
+        for num2 in range(max(0,q[num]-2), num):
+            print(q[num], "<", q[num2])
+            if q[num] < q[num2]:
+                bribes += 1
+    return bribes
 
 if __name__ == "__main__":
     # Test Cases
