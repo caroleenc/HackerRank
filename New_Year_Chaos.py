@@ -28,32 +28,14 @@ def jeremy_minimumbribes(q):
 def caroleen_minimumbribes(q):
     if len(q) == 0 or len(q) == 1:
         return 0
-    
-    current = 0
-    next = 1
-    total_bribes = 0
-    return compare_values(q, current, next, total_bribes)
-        
-def compare_values(q, current, next, total_bribes):
-    print(current, next)
-    if next == len(q):
-        return total_bribes
-    elif current == next:
-        return compare_values(q, current, next+1, total_bribes)
-    else:
-        print(q[current], q[next], total_bribes)
-        if q[next] - q[current] == 1:
-            print("Sequential", q[current], q[next], total_bribes)
-            return compare_values(q, current+1, next+1, total_bribes+0)
-        elif q[next] - q[current] == -1:
-            print("Partner number", q[current], q[next], total_bribes)
-            return compare_values(q, current+1, next, total_bribes+1)
-        elif q[next] - q[current] < 0:
-            print("Current is greater", q[current], q[next], total_bribes)
-            return compare_values(q, current, next+1, total_bribes+1)
-        elif q[next] - q[current] > 0:
-            print("Current is less", q[current], q[next], total_bribes)
-            return compare_values(q, current+1, next+1, total_bribes+0)
+    bribe = 0
+    for num in range(len(q)):
+        if num+1 == len(q):
+            return bribe
+        elif q[num] - q[num+1] >= 3:
+            return "Too Chaotic"
+        elif q[num] > q[num+1]:
+            bribe += (q[num]-q[num+1])
 
 if __name__ == "__main__":
     # Test Cases
@@ -72,7 +54,7 @@ if __name__ == "__main__":
     q = [1, 2, 5, 3, 7, 8, 6, 4]
     # print("Correct Answer: 7")
 
-    # q = [1, 2, 5, 3, 4, 7, 8, 6]
+    #q = [1, 2, 5, 3, 4, 7, 8, 6]
     # print("Correct Answer: 4")
 
     # Run program
