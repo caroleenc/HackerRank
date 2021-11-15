@@ -25,15 +25,27 @@ def minimumbribes(q):
         print(f"Final: {lineorder}")
         print(count)
 
+def modminimumbribes(q):
+    # Cheat answer
+    moves = 0
+    l = [p - 1 for p in q]
+    for i, p in enumerate(l):
+        if p - i > 2:
+            print("Too chaotic")
+            return
+        for j in range(max(p-1, 0), i):
+            if q[j] > p:
+                moves += 1
+    print(moves)
 
 if __name__ == "__main__":
     # Test Cases
     # t = [1, 2, 3, 4, 5]
-    # q = [2, 1, 5, 3, 4]
-    # print("Correct Answer: 3")
+    q = [2, 1, 5, 3, 4]
+    print("Correct Answer: 3")
 
-    q = [2, 5, 1, 3, 4]
-    print("Correct Answer: Too Chaotic")
+    # q = [2, 5, 1, 3, 4]
+    # print("Correct Answer: Too Chaotic")
 
     # q = [5, 1, 2, 3, 7, 8, 6, 4]
     # print("Correct Answer: Too Chaotic")
@@ -45,4 +57,5 @@ if __name__ == "__main__":
     # print("Correct Answer: 4")
 
     # Run program
-    minimumbribes(q)
+    # minimumbribes(q)
+    modminimumbribes(q)
