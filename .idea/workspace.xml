@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7894b6f5-35b1-4867-bd83-d6d571aa687b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Year_Chaos.py" beforeDir="false" afterPath="$PROJECT_DIR$/New_Year_Chaos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="20SbUBrFKcvKSJp7wCF67OGfIpo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,10 +42,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/New_Year_Chaos.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sherlock_and_the_Valid_String.py" />
   </component>
   <component name="RunManager">
-    <configuration name="New_Year_Chaos" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="Sherlock_and_the_Valid_String" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -55,7 +57,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/New_Year_Chaos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sherlock_and_the_Valid_String.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,8 +77,5 @@
       <updated>1636040959220</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
