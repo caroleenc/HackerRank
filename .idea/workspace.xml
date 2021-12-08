@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7894b6f5-35b1-4867-bd83-d6d571aa687b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/Sherlock_String.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sherlock_String.py" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -34,18 +39,30 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="20SbUBrFKcvKSJp7wCF67OGfIpo" />
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+>>>>>>> Stashed changes
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< Updated upstream
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Sherlock_and_the_Valid_String.py" />
   </component>
   <component name="RunManager">
     <configuration name="Sherlock_and_the_Valid_String" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sherlock_String.py" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Sherlock_String" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+>>>>>>> Stashed changes
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -57,7 +74,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sherlock_and_the_Valid_String.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sherlock_String.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
