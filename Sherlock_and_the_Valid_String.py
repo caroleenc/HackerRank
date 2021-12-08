@@ -1,4 +1,50 @@
-def isValid(string):
+#https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?isFullScreen=true&h_l=interview&playlist_slugs[0]=interview-preparation-kit&playlist_slugs[1]=strings
+
+import math
+import os
+import random
+import re
+import sys
+
+def caroleenIsValid(s):
+    letter_dict = {}
+    counter_dict = {}
+
+    if len(s) < 2:
+        return "YES"
+
+    for char in sorted(s):
+        if not char in letter_dict:
+            letter_dict[char] = 1
+        else:
+            letter_dict[char] += 1
+
+    #print(letter_dict)
+
+    for key in letter_dict:
+        if letter_dict[key] not in counter_dict:
+            counter_dict[letter_dict[key]] = 1
+        else:
+            counter_dict[letter_dict[key]] += 1
+
+    #print(counter_dict[list(counter_dict)[0]])
+    #print(list(counter_dict)[0])
+
+    if len(counter_dict) > 2:
+        return "NO"
+    elif len(counter_dict) == 1:
+        return "YES"
+    elif (counter_dict[list(counter_dict)[0]] == 1 or counter_dict[list(counter_dict)[1]] == 1) and (
+            list(counter_dict)[0] == list(counter_dict)[1] + 1 or list(counter_dict)[0] == list(counter_dict)[1] - 1):
+        return "YES"
+    elif (counter_dict[list(counter_dict)[0]] == 1 and list(counter_dict)[0] == 1) or (
+            counter_dict[list(counter_dict)[1]] == 1 and list(counter_dict)[1] == 1):
+        return "YES"
+    else:
+        return "NO"
+
+
+def jeremyIsValid(string):
     string_counter = {}
     for element in string:
         if element in string_counter:
@@ -25,37 +71,50 @@ def isValid(string):
             return 'NO'
 
 
-print('Test Case 1')
-s = 'abc'
-print(isValid(s))
-print('Answer: YES\n')
+def getAnswers(string):
+    print('Caroleen\'s Answer:', caroleenIsValid(string))
+    print('Jeremy\'s Answer:', jeremyIsValid(string))
 
-print('Test Case 2')
-s = 'abcc'
-print(isValid(s))
-print('Answer: YES\n')
+if __name__ == '__main__':
+    #s = 'daabbcdcd'
+    #s = 'daabbcdd'
+    #s = 'aabbccddeefghi'
+    print('Test Case 0')
+    s = 'ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd'
+    getAnswers(s)
+    print('Correct Answer: Yes\n')
 
-print('Test Case 3')
-s = 'abccc'
-print(isValid(s))
-print('Answer: NO\n')
+    print('Test Case 1')
+    s = 'abc'
+    getAnswers(s)
+    print('Correct Answer: YES\n')
 
-print('Test Case 4')
-s = 'aabbcd'
-print(isValid(s))
-print('Answer: NO\n')
+    print('Test Case 2')
+    s = 'abcc'
+    getAnswers(s)
+    print('Correct Answer: YES\n')
 
-print('Test Case 5')
-s = 'aabbccddeefghi'
-print(isValid(s))
-print('Answer: NO\n')
+    print('Test Case 3')
+    s = 'abccc'
+    getAnswers(s)
+    print('Correct Answer: NO\n')
 
-print('Test Case 6')
-s = 'abcdefghhgfedecba'
-print(isValid(s))
-print('Answer: YES\n')
+    print('Test Case 4')
+    s = 'aabbcd'
+    getAnswers(s)
+    print('Correct Answer: NO\n')
 
-print('Test Case 7')
-s = 'aabbc'
-print(isValid(s))
-print('Answer: YES')
+    print('Test Case 5')
+    s = 'aabbccddeefghi'
+    getAnswers(s)
+    print('Correct Answer: NO\n')
+
+    print('Test Case 6')
+    s = 'abcdefghhgfedecba'
+    getAnswers(s)
+    print('Correct Answer: YES\n')
+
+    print('Test Case 7')
+    s = 'aabbc'
+    getAnswers(s)
+    print('Correct Answer: YES\n')
