@@ -51,8 +51,17 @@ def jeremyIsValid(string):
             string_counter[element] += 1
         else:
             string_counter[element] = 1
+
     string_optimize = list(string_counter.values())
-    string_optimize = [num - min(string_optimize) for num in string_optimize]
+
+    counter = 0
+    for element in string_optimize:
+        current_frequency = string_optimize.count(element)
+        if current_frequency > counter:
+            counter = current_frequency
+            num = element
+
+    string_optimize = [e - num for e in string_optimize]
 
     counter = 0
     evaluate_list = []
@@ -75,6 +84,14 @@ def getAnswers(string):
     print('Caroleen\'s Answer:', caroleenIsValid(string))
     print('Jeremy\'s Answer:', jeremyIsValid(string))
 
+def getTestCases(string_list, answers):
+    counter = 0
+    for testcase in range(len(string_list)):
+        print(f"Test Case {counter + 1}")
+        getAnswers(string_list[counter])
+        print(f"Correct Answer: {answers[counter]}\n")
+        counter += 1
+
 if __name__ == '__main__':
     #s = 'daabbcdcd'
     #s = 'daabbcdd'
@@ -82,7 +99,7 @@ if __name__ == '__main__':
     print('Test Case 0')
     s = 'ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedechahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfihaefefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieiegiffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibgcedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfieihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfagfdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd'
     getAnswers(s)
-    print('Correct Answer: Yes\n')
+    print('Correct Answer: YES\n')
 
     print('Test Case 1')
     s = 'abc'
@@ -118,3 +135,24 @@ if __name__ == '__main__':
     s = 'aabbc'
     getAnswers(s)
     print('Correct Answer: YES\n')
+
+    #s = 'daabbcdcd'
+    #s = 'daabbcdd'
+    #s = 'aabbccddeefghi'
+
+    s = ['ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedcabfih\
+chdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgfeeibgaiffdeh\
+igebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddghdgbgehhhifhgcedech\
+ahidcbchebheihaadbbbiaiccededchdagfhccfdefigfibifabeiaccghcegfbcghaefifbachebaacbhbfgfddeceababbacgffbagidebeadfiha\
+efefegbghgddbbgddeehgfbhafbccidebgehifafgbghafacgfdccgifdcbbbidfifhdaibgigebigaedeaaiadegfefbhacgddhchgcbgcaeaieieg\
+iffchbgbebgbehbbfcebciiagacaiechdigbgbghefcahgbhfibhedaeeiffebdiabcifgccdefabccdghehfibfiifdaicfedagahhdcbhbicdgibg\
+cedieihcichadgchgbdcdagaihebbabhibcihicadgadfcihdheefbhffiageddhgahaidfdhhdbgciiaciegchiiebfbcbhaeagccfhbfhaddagnfi\
+eihghfbaggiffbbfbecgaiiidccdceadbbdfgigibgcgchafccdchgifdeieicbaididhfcfdedbhaadedfageigfdehgcdaecaebebebfcieaecfag\
+fdieaefdiedbcadchabhebgehiidfcgahcdhcdhgchhiiheffiifeegcfdgbdeffhgeghdfhbfbifgidcafbfcd', 'abc', 'abcc', 'abccc', 'aab\
+bcd', 'aabbccddeefghi', 'abcdefghhgfedecba', 'aabbc', 'daabbcdcd', 'daabbcdd', 'aabbccddeefghi']
+
+    a = ['YES', 'YES', 'YES', 'NO', 'NO', 'NO', 'YES', 'YES', 'YES', 'NO', 'NO']
+
+    getTestCases(s, a)
+
+    print(s)
