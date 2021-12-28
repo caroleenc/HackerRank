@@ -1,46 +1,40 @@
-def caroleen2DArray(arr):
+def caroleenMinSwap2(arr):
     return "Caroleen"
 
 
-def jeremy2DArray(arr):
-    def getHourglassSum(ind):
-        hourglass = sum([sum(arr[ind[0] - 1][(ind[1] - 1):(ind[1] + 2)]), arr[ind[0]][ind[1]],
-                         sum(arr[ind[0] + 1][(ind[1] - 1):(ind[1] + 2)])])
-        return hourglass
+def jeremyMinSwap2(arr):
+    swaps = 0
+    for count, element in enumerate(arr, start=1):
+        if element != count:
+            arr[arr.index(count)] = element
+            arr[count - 1] = count
+            swaps += 1
 
-    total = []
-
-    for i in range(1, 5):
-        for j in range(1, 5):
-            total.append(getHourglassSum((i, j)))
-
-    return max(total)
+    return swaps
 
 
 def getAnswers(string):
-    print('Caroleen\'s Answer:', caroleen2DArray(string))
-    print('Jeremy\'s Answer:', jeremy2DArray(string))
+    print('Caroleen\'s Answer:', caroleenMinSwap2(string))
+    print('Jeremy\'s Answer:', jeremyMinSwap2(string))
 
 
-def getTestCases(string_list, answers):
+def getTestCases(questions, answers):
     counter = 0
-    for testcase in range(len(string_list)):
+    for testcase in range(len(questions)):
         print(f"Test Case {counter + 1}")
-        getAnswers(string_list[counter])
+        getAnswers(questions[counter])
         print(f"Correct Answer: {answers[counter]}\n")
         counter += 1
 
 
 if __name__ == '__main__':
-    q1 = [[1, 1, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0]]
-    q2 = [[-9, -9, -9, 1, 1, 1], [0, -9, 0, 4, 3, 2], [-9, -9, -9, 1, 2, 3], [0, 0, 8, 6, 6, 0], [0, 0, 0, -2, 0, 0],
-          [0, 0, 1, 2, 4, 0]]
-    q3 = [[1, 1, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0], [0, 0, 2, 4, 4, 0], [0, 0, 0, 2, 0, 0],
-          [0, 0, 1, 2, 4, 0]]
+    q1 = [7, 1, 3, 2, 4, 5, 6]
+    q2 = [4, 3, 1, 2]
+    q3 = [2, 3, 4, 1, 5]
+    q4 = [1, 3, 5, 2, 4, 6, 7]
 
-    s = [q1, q2, q3]
+    s = [q1, q2, q3, q4]
 
-    a = [7, 28, 19]
+    a = [5, 3, 3, 3]
 
     getTestCases(s, a)
