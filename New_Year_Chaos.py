@@ -25,6 +25,19 @@ def jeremy_minimumbribes(q):
         print(f"Final: {lineorder}")
         print(count)
 
+def modminimumbribes(q):
+    # Cheat answer
+    moves = 0
+    l = [p - 1 for p in q]
+    for i, p in enumerate(l):
+        if p - i > 2:
+            print("Too chaotic")
+            return
+        for j in range(max(p-1, 0), i):
+            if q[j] > p:
+                moves += 1
+    #print(moves)
+
 def caroleen_minimumbribes(q):
     if len(q) == 0 or len(q) == 1:
         return 0
@@ -62,6 +75,7 @@ if __name__ == "__main__":
     # print("Correct Answer: 4")
 
     # Run program
+    # minimumbribes(q)
+    modminimumbribes(q)
     #jeremy_minimumbribes(q)
-
     print(caroleen_minimumbribes(q))
