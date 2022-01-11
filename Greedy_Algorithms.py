@@ -1,3 +1,7 @@
+# https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/problem?isFullScreen=true&h_l=interview&\
+# playlist_slugs[0]=interview-preparation-kit&playlist_slugs[1]=greedy-algorithms&fbclid=IwAR2ZXOeTGwJYMbFyw4wm9J-pc6g-\
+# 7vbGZljbPwr-bPEZGL95N5pTwTn8MR4
+
 def caroleen2DArray(arr):
     return "Caroleen"
 
